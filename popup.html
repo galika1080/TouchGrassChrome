@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="styles.css">
-    touchGrass
+    <title>touchGrass extension</title>
+    <link rel="stylesheet" href="popup_style.css">
   </head>
   <body>
-    <script src="popup.js"></script>
-    <div id="interestText"></div>
-    <div id="interestList"></div>
+    <h1>touchGrass<sup style="font-family: sans-serif; font-weight: 200; font-size:50%;">v1.0</sup></h1>
+    <div id="separator"></div>
+    <p>Logged in as <b>example@illinois.edu</b> | <a href="example.com">Log out</a></p>
+    <p>Next newsletter in 11 days.</p>
+    <div id="separator"></div>
 
+    <h2>Your current interests:</h2>
+    <h3 style="font-size: 90%; margin-top: 0;">Click an interest to remove it.</h3>
+
+    <script src="popup.js"></script>
+    <!-- <div id="interestText"></div> -->
+    <div id="interestList"></div>
+    <div id="interests">
+
+    <h2>Add a new interest:</h2>
+    <input type="text" id="newInterest" name="newInterest" placeholder="dog food">
+    <button id="submitNewInterest">Add</button>
+    </div>
     <br>
-    Type a new interest here
-    <input type="text" id="newInterest" name="newInterest">
-    <button id="submitNewInterest">Add it!</button>
+
+    <div id="separator"></div>
+    <footer><a href="https://sites.google.com/illinois.edu/touchgrass">More info</a></footer>
+
   </body>
 </html>

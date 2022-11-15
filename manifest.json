@@ -1,5 +1,5 @@
 {
-    "name": "TouchGrass",
+    "name": "touchGrass",
     "description": "Find stuff you want to do.",
     "version": "1.0",
     "manifest_version": 3,
@@ -14,5 +14,11 @@
     "permissions": [
         "history",
         "storage"
-    ]
+    ],
+    "icons": {
+        "16": "/assets/touchgrass.png",
+        "32": "/assets/touchgrass.png",
+        "64": "/assets/touchgrass.png",
+        "128": "/assets/touchgrass.png"
+    } 
 }

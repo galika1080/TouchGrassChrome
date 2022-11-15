@@ -19,7 +19,7 @@ async function fetchUserTags(whenDone) {
 }
 
 function drawInterests() {
-    document.getElementById('interestText').textContent = "Interests: " + interests.join(", ");
+    // document.getElementById('interestText').textContent = "Interests: " + interests.join(", ");
 
     const interestDiv = document.getElementById('interestList');
     interestDiv.textContent = "";
