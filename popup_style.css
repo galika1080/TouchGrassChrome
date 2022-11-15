@@ -23,6 +23,7 @@ hr {
 
 body {
   border: 4px var(--link-color) double;
+  box-shadow: 1px 2px var(--link-color);
   border-radius: 2px;
   min-width: 300px; /* your desired width */
   min-height: 300px;
@@ -36,6 +37,9 @@ body {
 input {
   padding: .5em;
   /* margin: 5px; */
+  border: 2px var(--link-color) solid;
+  border-radius: 2px;
+  background-color:rgb(255, 252, 238);
 
 }
 button {
