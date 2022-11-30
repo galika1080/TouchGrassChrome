@@ -1,6 +1,6 @@
 
 // Filepath for json events
-const eventJSON = "./example-events.json"
+const eventJSON = "https://jsonbucket12345.s3.us-west-2.amazonaws.com/example-events.json"
 
 /**
  * Appends a new event to <body>
