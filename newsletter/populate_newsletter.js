@@ -51,7 +51,6 @@ function newEvent(event) {
  */
 function populate(events) {   
     for(let i = events.length - 1; i != 0; i--) {
-        console.log(events[i])
         newEvent(events[i])
     }
     const footer = document.createElement('footer')
