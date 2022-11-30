@@ -1,5 +1,9 @@
 var interests = [];
 
+var sample_interests = ["dog food", "live music", "inline skating", "jazz", "LARPing", "glassblowing", "wine tasting", "parks", "makerspaces", "sports", "intramural sports", "pottery", "painting", "orchestra"];
+
+user_email = 'agalik2@illinois.edu' 
+
 async function fetchUserTags(whenDone) {
     let response = await fetch('https://70d1rcnpgh.execute-api.us-west-2.amazonaws.com/get-user-tags', {
         method: 'POST',
@@ -8,7 +12,7 @@ async function fetchUserTags(whenDone) {
         'Content-Type': 'text/plain'
         },
         body: JSON.stringify({
-            email: 'agalik2@illinois.edu'
+            email: user_email
         })
     })
 
@@ -40,7 +44,7 @@ async function setUserTags(tagsList) {
         'Content-Type': 'text/plain'
         },
         body: JSON.stringify({
-            email: 'agalik2@illinois.edu',
+            email: user_email,
             tags: tagsList
         })
     })
@@ -80,5 +84,14 @@ window.onload = function() {
         setUserTags(interests); // store in cloud (async)
         chrome.storage.local.set({interests: interests}, drawInterests); // store locally (async), then re-draw interests
     });
+
+    // display user email
+    const elem = document.getElementById('user_email');
+    elem.textContent = user_email
+
+    // random placeholder for interests input
+    const input = document.getElementById('newInterest');
+    input.placeholder = sample_interests[Math.floor(Math.random() * sample_interests.length)];
+
 }
 
