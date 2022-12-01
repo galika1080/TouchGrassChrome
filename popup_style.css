@@ -12,6 +12,10 @@ div#separator {
   src: url(./assets/calistoga.woff2);
 }
 
+#interestList > button:hover {
+  text-decoration: line-through;
+}
+
 @font-face {
   font-family: "Heebo";
   src: url(./assets/heebo.woff);
@@ -56,6 +60,7 @@ button.current {
   box-shadow: 0 0 0 2px white,
               0 0 0 4px black;
 }
+
 
 p {
   line-height: 1ch;

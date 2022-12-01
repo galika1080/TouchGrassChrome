@@ -79,10 +79,11 @@ window.onload = function() {
     });
 
     submitNewInterest.addEventListener("click", async () => {
-        interests.push(document.getElementById('newInterest').value);
 
+        interests.push(document.getElementById('newInterest').value);
         setUserTags(interests); // store in cloud (async)
         chrome.storage.local.set({interests: interests}, drawInterests); // store locally (async), then re-draw interests
+        document.getElementById("newInterest").value = ""; //clear textbox
     });
 
     // display user email
